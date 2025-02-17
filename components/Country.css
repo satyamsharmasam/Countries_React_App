@@ -1,0 +1,189 @@
+@import url("https://fonts.googleapis.com/css?family=Nunito:300,regular,600,700,800,900");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  --background-color: white;
+  --text-color: black;
+  --elements-color: white;
+
+  font-family: Nunito, sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+.dark {
+  --background-color: hsl(207, 26%, 17%);
+  --text-color: white;
+  --elements-color: hsl(209, 23%, 22%);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+header {
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  z-index: 1;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 60px;
+  padding-inline: 24px;
+  max-width: 1300px;
+  margin-inline: auto;
+}
+
+.title {
+  font-weight: 800;
+}
+
+.header-content p {
+  font-weight: bold;
+  cursor: pointer;
+}
+
+main {
+  padding: 24px;
+  min-height: calc(100vh - 60px);
+}
+
+/* Country Details */
+.country-details-container {
+  max-width: 1300px;
+  margin: 20px auto;
+}
+
+.backBtn {
+  padding: 5px 30px;
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 700;
+  background-color: var(--elements-color);
+  color: var(--text-color);
+}
+
+.country-dtl {
+  display: flex;
+  margin-top: 64px;
+  align-items: center;
+  gap: 100px;
+}
+
+.country-dtl img {
+  width: 40%;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+}
+
+.card-title {
+  margin-bottom: 20px;
+  font-weight: 800;
+}
+
+.dtl-text {
+  display: flex;
+  flex-direction: column;
+  row-gap: 14px;
+  column-gap: 70px;
+  max-height: 170px;
+  flex-wrap: wrap;
+}
+
+.border-countries {
+  margin-top: 50px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.border-countries a {
+  padding: 2px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  background-color: var(--elements-color);
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive */
+@media (max-width: 950px) {
+  .title {
+    font-size: 16px;
+  }
+  .header-content p {
+    font-size: 13px;
+  }
+  .country-dtl {
+    flex-direction: column;
+    gap: 30px;
+    align-items: flex-start;
+    margin-top: 40px;
+  }
+  .country-dtl img {
+    width: 100%;
+    max-width: 400px;
+  }
+  .dtl-text {
+    max-height: unset;
+  }
+  .dtl-text-container {
+    margin-top: 0px;
+  }
+}
+
+/* ============================= */
+/* Shimmer Skeleton Effect       */
+/* ============================= */
+
+.shimmer-bg {
+  background: linear-gradient(90deg, #f6f7f8 25%, #e0e0e0 50%, #f6f7f8 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.flag-img.shimmer-bg {
+  width: 40%;
+  height: 250px;
+  border-radius: 8px;
+}
+
+.card-title.shimmer-bg {
+  height: 24px;
+  width: 60%;
+  border-radius: 5px;
+}
+
+.dtl-text p.shimmer-bg {
+  height: 16px;
+  width: 50%;
+  border-radius: 4px;
+  margin-bottom: 8px;
+}
+
+.border-countries .shimmer-bg {
+  height: 24px;
+  width: 80px;
+  border-radius: 4px;
+}
